@@ -47,6 +47,18 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    [self.imageView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self);
+        make.right.mas_equalTo(self);
+        make.top.mas_equalTo(self.mas_top);
+        make.bottom.mas_equalTo(self.mas_bottom).offset(-20);
+    }];
+    [self.title mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self);
+        make.right.mas_equalTo(self);
+        make.top.mas_equalTo(self.imageView.mas_bottom);
+        make.bottom.mas_equalTo(self);
+    }];
 }
 
 - (void)setModel:(KSWikiDataModel *)model
