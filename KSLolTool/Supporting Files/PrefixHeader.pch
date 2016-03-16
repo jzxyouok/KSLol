@@ -16,5 +16,8 @@
 //状态栏高度
 #define StatusHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
 
+//常用category
+#import "UIView+KSExtension.h"
+
 
 #endif /* PrefixHeader_pch */

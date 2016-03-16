@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "KSTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"%f",SCREEN_WIDTH);
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window setRootViewController:[[KSTabBarController alloc]init]];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

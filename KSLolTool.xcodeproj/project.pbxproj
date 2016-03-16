@@ -17,6 +17,12 @@
 		3C101C661C981F910097505D /* KSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C651C981F910097505D /* KSViewController.m */; };
 		3C101C681C981FBD0097505D /* startImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C101C671C981FBD0097505D /* startImage.png */; };
 		3C101C6B1C981FFE0097505D /* UIView+KSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C6A1C981FFE0097505D /* UIView+KSExtension.m */; };
+		3C101C6F1C98398E0097505D /* noDataImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C101C6E1C98398E0097505D /* noDataImage.png */; };
+		3C101C721C983BFE0097505D /* KSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C711C983BFE0097505D /* KSNavigationController.m */; };
+		3C101C751C983C6F0097505D /* UIBarButtonItem+KSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C741C983C6F0097505D /* UIBarButtonItem+KSExtension.m */; };
+		3C101C801C9844900097505D /* KSWikiDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C7D1C9844900097505D /* KSWikiDataController.m */; };
+		3C101C831C98479A0097505D /* KSWikiDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C821C98479A0097505D /* KSWikiDataModel.m */; };
+		3C101C861C9847B80097505D /* KSWikiDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C851C9847B80097505D /* KSWikiDataView.m */; };
 		87B852850EC2B43BBB6AE5E4 /* libPods-KSLolTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF1348ADEBA35E6EF3C3414 /* libPods-KSLolTool.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +62,17 @@
 		3C101C671C981FBD0097505D /* startImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage.png; sourceTree = "<group>"; };
 		3C101C691C981FFE0097505D /* UIView+KSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KSExtension.h"; sourceTree = "<group>"; };
 		3C101C6A1C981FFE0097505D /* UIView+KSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KSExtension.m"; sourceTree = "<group>"; };
+		3C101C6E1C98398E0097505D /* noDataImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noDataImage.png; sourceTree = "<group>"; };
+		3C101C701C983BFE0097505D /* KSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNavigationController.h; sourceTree = "<group>"; };
+		3C101C711C983BFE0097505D /* KSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNavigationController.m; sourceTree = "<group>"; };
+		3C101C731C983C6F0097505D /* UIBarButtonItem+KSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KSExtension.h"; sourceTree = "<group>"; };
+		3C101C741C983C6F0097505D /* UIBarButtonItem+KSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KSExtension.m"; sourceTree = "<group>"; };
+		3C101C7C1C9844900097505D /* KSWikiDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWikiDataController.h; sourceTree = "<group>"; };
+		3C101C7D1C9844900097505D /* KSWikiDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWikiDataController.m; sourceTree = "<group>"; };
+		3C101C811C98479A0097505D /* KSWikiDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWikiDataModel.h; sourceTree = "<group>"; };
+		3C101C821C98479A0097505D /* KSWikiDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWikiDataModel.m; sourceTree = "<group>"; };
+		3C101C841C9847B80097505D /* KSWikiDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWikiDataView.h; sourceTree = "<group>"; };
+		3C101C851C9847B80097505D /* KSWikiDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWikiDataView.m; sourceTree = "<group>"; };
 		6EF1348ADEBA35E6EF3C3414 /* libPods-KSLolTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSLolTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D7CFCB784621BDCDBE7DFD /* Pods-KSLolTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSLolTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSLolTool/Pods-KSLolTool.release.xcconfig"; sourceTree = "<group>"; };
 		F75D3C993964F309C2361833 /* Pods-KSLolTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSLolTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSLolTool/Pods-KSLolTool.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +130,7 @@
 				3C101C4B1C981C550097505D /* App */,
 				3C101C4E1C981C550097505D /* BaseClass */,
 				3C101C4F1C981C550097505D /* Main */,
+				3C101C761C98426B0097505D /* WikiData（百科数据） */,
 				3C101C501C981C550097505D /* Resources */,
 				3C101C511C981C550097505D /* Supporting Files */,
 				3C101C591C981C550097505D /* Tools */,
@@ -143,6 +161,8 @@
 			children = (
 				3C101C611C981E3D0097505D /* KSTabBarController.h */,
 				3C101C621C981E3D0097505D /* KSTabBarController.m */,
+				3C101C701C983BFE0097505D /* KSNavigationController.h */,
+				3C101C711C983BFE0097505D /* KSNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -150,6 +170,7 @@
 		3C101C501C981C550097505D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C101C6E1C98398E0097505D /* noDataImage.png */,
 				3C101C671C981FBD0097505D /* startImage.png */,
 			);
 			path = Resources;
@@ -179,10 +200,57 @@
 		3C101C5A1C981C550097505D /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				3C101C731C983C6F0097505D /* UIBarButtonItem+KSExtension.h */,
+				3C101C741C983C6F0097505D /* UIBarButtonItem+KSExtension.m */,
 				3C101C691C981FFE0097505D /* UIView+KSExtension.h */,
 				3C101C6A1C981FFE0097505D /* UIView+KSExtension.m */,
 			);
 			path = Categorys;
+			sourceTree = "<group>";
+		};
+		3C101C761C98426B0097505D /* WikiData（百科数据） */ = {
+			isa = PBXGroup;
+			children = (
+				3C101C7A1C9844900097505D /* WikiHome */,
+			);
+			path = "WikiData（百科数据）";
+			sourceTree = "<group>";
+		};
+		3C101C7A1C9844900097505D /* WikiHome */ = {
+			isa = PBXGroup;
+			children = (
+				3C101C7B1C9844900097505D /* Controller */,
+				3C101C7E1C9844900097505D /* Model */,
+				3C101C7F1C9844900097505D /* View */,
+			);
+			path = WikiHome;
+			sourceTree = "<group>";
+		};
+		3C101C7B1C9844900097505D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C101C7C1C9844900097505D /* KSWikiDataController.h */,
+				3C101C7D1C9844900097505D /* KSWikiDataController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3C101C7E1C9844900097505D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C101C811C98479A0097505D /* KSWikiDataModel.h */,
+				3C101C821C98479A0097505D /* KSWikiDataModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3C101C7F1C9844900097505D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C101C841C9847B80097505D /* KSWikiDataView.h */,
+				3C101C851C9847B80097505D /* KSWikiDataView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B07E22DF095A335331BE8F07 /* Frameworks */ = {
@@ -310,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C101C5F1C981C550097505D /* LaunchScreen.storyboard in Resources */,
+				3C101C6F1C98398E0097505D /* noDataImage.png in Resources */,
 				3C101C5D1C981C550097505D /* Info.plist in Resources */,
 				3C101C681C981FBD0097505D /* startImage.png in Resources */,
 				3C101C5C1C981C550097505D /* Assets.xcassets in Resources */,
@@ -385,11 +454,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C101C721C983BFE0097505D /* KSNavigationController.m in Sources */,
 				3C101C6B1C981FFE0097505D /* UIView+KSExtension.m in Sources */,
 				3C101C5B1C981C550097505D /* AppDelegate.m in Sources */,
+				3C101C831C98479A0097505D /* KSWikiDataModel.m in Sources */,
 				3C101C631C981E3D0097505D /* KSTabBarController.m in Sources */,
+				3C101C751C983C6F0097505D /* UIBarButtonItem+KSExtension.m in Sources */,
+				3C101C801C9844900097505D /* KSWikiDataController.m in Sources */,
 				3C101C601C981C550097505D /* main.m in Sources */,
 				3C101C5E1C981C550097505D /* KSLolTool.xcdatamodeld in Sources */,
+				3C101C861C9847B80097505D /* KSWikiDataView.m in Sources */,
 				3C101C661C981F910097505D /* KSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

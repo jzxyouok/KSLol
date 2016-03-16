@@ -1,5 +1,5 @@
 //
-//  KSViewController.h
+//  KSNavigationController.h
 //  KSLolTool
 //
 //  Created by xiaoshi on 16/3/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KSViewController : UIViewController
-- (void)setNoDataViewHide:(BOOL)isHide;
+@interface KSNavigationController : UINavigationController
+
 @end

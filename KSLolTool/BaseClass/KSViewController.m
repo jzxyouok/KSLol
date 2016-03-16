@@ -9,7 +9,7 @@
 #import "KSViewController.h"
 
 @interface KSViewController ()
-
+@property (nonatomic, strong) UIImageView *noDataImageView;
 @end
 
 @implementation KSViewController
@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view addSubview:self.noDataImageView];
+    [self setNoDataViewHide:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +26,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setNoDataViewHide:(BOOL)isHide
+{
+    self.noDataImageView.hidden = isHide;
 }
-*/
+
+- (UIImageView *)noDataImageView
+{
+    if (!_noDataImageView) {
+        _noDataImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"noDataImage"]];
+        [_noDataImageView sizeToFit];
+        _noDataImageView.center = self.view.center;
+    }
+    return _noDataImageView;
+}
 
 @end
