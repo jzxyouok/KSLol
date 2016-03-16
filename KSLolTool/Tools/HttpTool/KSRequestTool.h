@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KSRequestTool : NSObject
+typedef void(^SuccessBlock)(id response);
+typedef void(^FailureBlock)(NSError *error);
 
+@interface KSRequestTool : NSObject
++ (void)RequestToolGetUrl:(NSString *)url Success:(SuccessBlock)successBlock Failure:(FailureBlock)failureBlock;
 @end
