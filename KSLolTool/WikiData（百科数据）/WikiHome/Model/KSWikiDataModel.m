@@ -9,5 +9,13 @@
 #import "KSWikiDataModel.h"
 
 @implementation KSWikiDataModel
-
+- (instancetype)initWithTitleName:(NSString *)titleName iconName:(NSString *)iconName
+{
+    self = [super init];
+    if (self) {
+        _titleName = titleName;
+        _iconName = iconName;
+    }
+    return self;
+}
 @end

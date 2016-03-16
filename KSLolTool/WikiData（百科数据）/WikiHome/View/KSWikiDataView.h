@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSWikiDataModel.h"
 
 @interface KSWikiDataView : UIView
-
+@property (nonatomic, strong)KSWikiDataModel *model;
 @end

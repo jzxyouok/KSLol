@@ -9,5 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface KSWikiDataModel : NSObject
+@property (nonatomic, strong) NSString *titleName;
+@property (nonatomic, strong) NSString *iconName;
+/**
+ *  初始化数据
+ *
+ *  @param titleName
+ *  @param iconName
+ *
+ *  @return 
+ */
+- (instancetype)initWithTitleName:(NSString *)titleName iconName:(NSString *)iconName;
 
 @end
