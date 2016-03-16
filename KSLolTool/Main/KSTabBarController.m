@@ -8,6 +8,7 @@
 
 #import "KSTabBarController.h"
 #import "KSViewController.h"
+#import "KSNewsHomeController.h"
 #import "KSWikiDataController.h"
 #import "KSNavigationController.h"
 @interface KSTabBarController ()
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    KSViewController *v1 = [[KSViewController alloc] init];
+    KSNewsHomeController *v1 = [[KSNewsHomeController alloc] init];
     [self addChildViewController:v1 barImageName:@"tabbar_me"];
     KSViewController *v2 = [[KSViewController alloc] init];
     [self addChildViewController:v2 barImageName:@"tabbar_me"];

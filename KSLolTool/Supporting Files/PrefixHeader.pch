@@ -15,9 +15,10 @@
 #define SCREEN_WIDTH          [[UIScreen mainScreen] bounds].size.width
 //状态栏高度
 #define StatusHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
+#define NavagationHeight    44
 
 //常用category
 #import "UIView+KSExtension.h"
-
+#import "KSRequestTool.h"
 
 #endif /* PrefixHeader_pch */

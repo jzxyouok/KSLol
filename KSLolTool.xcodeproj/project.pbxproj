@@ -23,6 +23,11 @@
 		3C101C801C9844900097505D /* KSWikiDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C7D1C9844900097505D /* KSWikiDataController.m */; };
 		3C101C831C98479A0097505D /* KSWikiDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C821C98479A0097505D /* KSWikiDataModel.m */; };
 		3C101C861C9847B80097505D /* KSWikiDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C101C851C9847B80097505D /* KSWikiDataView.m */; };
+		3CF6DFC61C998A8400EE3A3B /* KSNewsHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6DFC51C998A8400EE3A3B /* KSNewsHomeController.m */; };
+		3CF6DFCC1C998D3300EE3A3B /* CollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6DFC91C998D3300EE3A3B /* CollectionImageCell.m */; };
+		3CF6DFCD1C998D3300EE3A3B /* CollectionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6DFCB1C998D3300EE3A3B /* CollectionImageView.m */; };
+		3CF6DFD11C998D8900EE3A3B /* KSRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6DFD01C998D8900EE3A3B /* KSRequestTool.m */; };
+		3CF6DFD41C999E0A00EE3A3B /* KSNewsHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6DFD31C999E0A00EE3A3B /* KSNewsHeaderModel.m */; };
 		87B852850EC2B43BBB6AE5E4 /* libPods-KSLolTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF1348ADEBA35E6EF3C3414 /* libPods-KSLolTool.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +78,16 @@
 		3C101C821C98479A0097505D /* KSWikiDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWikiDataModel.m; sourceTree = "<group>"; };
 		3C101C841C9847B80097505D /* KSWikiDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWikiDataView.h; sourceTree = "<group>"; };
 		3C101C851C9847B80097505D /* KSWikiDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWikiDataView.m; sourceTree = "<group>"; };
+		3CF6DFC41C998A8400EE3A3B /* KSNewsHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNewsHomeController.h; sourceTree = "<group>"; };
+		3CF6DFC51C998A8400EE3A3B /* KSNewsHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNewsHomeController.m; sourceTree = "<group>"; };
+		3CF6DFC81C998D3300EE3A3B /* CollectionImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionImageCell.h; sourceTree = "<group>"; };
+		3CF6DFC91C998D3300EE3A3B /* CollectionImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageCell.m; sourceTree = "<group>"; };
+		3CF6DFCA1C998D3300EE3A3B /* CollectionImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionImageView.h; sourceTree = "<group>"; };
+		3CF6DFCB1C998D3300EE3A3B /* CollectionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageView.m; sourceTree = "<group>"; };
+		3CF6DFCF1C998D8900EE3A3B /* KSRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRequestTool.h; sourceTree = "<group>"; };
+		3CF6DFD01C998D8900EE3A3B /* KSRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRequestTool.m; sourceTree = "<group>"; };
+		3CF6DFD21C999E0A00EE3A3B /* KSNewsHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSNewsHeaderModel.h; sourceTree = "<group>"; };
+		3CF6DFD31C999E0A00EE3A3B /* KSNewsHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSNewsHeaderModel.m; sourceTree = "<group>"; };
 		6EF1348ADEBA35E6EF3C3414 /* libPods-KSLolTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSLolTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D7CFCB784621BDCDBE7DFD /* Pods-KSLolTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSLolTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSLolTool/Pods-KSLolTool.release.xcconfig"; sourceTree = "<group>"; };
 		F75D3C993964F309C2361833 /* Pods-KSLolTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSLolTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSLolTool/Pods-KSLolTool.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +145,7 @@
 				3C101C4B1C981C550097505D /* App */,
 				3C101C4E1C981C550097505D /* BaseClass */,
 				3C101C4F1C981C550097505D /* Main */,
+				3CF6DFBF1C998A5400EE3A3B /* News(新闻资讯) */,
 				3C101C761C98426B0097505D /* WikiData（百科数据） */,
 				3C101C501C981C550097505D /* Resources */,
 				3C101C511C981C550097505D /* Supporting Files */,
@@ -192,7 +208,9 @@
 		3C101C591C981C550097505D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3CF6DFC71C998D3300EE3A3B /* CollectionView封装 */,
 				3C101C5A1C981C550097505D /* Categorys */,
+				3CF6DFCE1C998D7000EE3A3B /* HttpTool */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -251,6 +269,69 @@
 				3C101C851C9847B80097505D /* KSWikiDataView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3CF6DFBF1C998A5400EE3A3B /* News(新闻资讯) */ = {
+			isa = PBXGroup;
+			children = (
+				3CF6DFC01C998A5400EE3A3B /* NewsHome */,
+			);
+			path = "News(新闻资讯)";
+			sourceTree = "<group>";
+		};
+		3CF6DFC01C998A5400EE3A3B /* NewsHome */ = {
+			isa = PBXGroup;
+			children = (
+				3CF6DFC11C998A5400EE3A3B /* Controller */,
+				3CF6DFC21C998A5400EE3A3B /* Model */,
+				3CF6DFC31C998A5400EE3A3B /* View */,
+			);
+			path = NewsHome;
+			sourceTree = "<group>";
+		};
+		3CF6DFC11C998A5400EE3A3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3CF6DFC41C998A8400EE3A3B /* KSNewsHomeController.h */,
+				3CF6DFC51C998A8400EE3A3B /* KSNewsHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3CF6DFC21C998A5400EE3A3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CF6DFD21C999E0A00EE3A3B /* KSNewsHeaderModel.h */,
+				3CF6DFD31C999E0A00EE3A3B /* KSNewsHeaderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CF6DFC31C998A5400EE3A3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CF6DFC71C998D3300EE3A3B /* CollectionView封装 */ = {
+			isa = PBXGroup;
+			children = (
+				3CF6DFC81C998D3300EE3A3B /* CollectionImageCell.h */,
+				3CF6DFC91C998D3300EE3A3B /* CollectionImageCell.m */,
+				3CF6DFCA1C998D3300EE3A3B /* CollectionImageView.h */,
+				3CF6DFCB1C998D3300EE3A3B /* CollectionImageView.m */,
+			);
+			path = "CollectionView封装";
+			sourceTree = "<group>";
+		};
+		3CF6DFCE1C998D7000EE3A3B /* HttpTool */ = {
+			isa = PBXGroup;
+			children = (
+				3CF6DFCF1C998D8900EE3A3B /* KSRequestTool.h */,
+				3CF6DFD01C998D8900EE3A3B /* KSRequestTool.m */,
+			);
+			path = HttpTool;
 			sourceTree = "<group>";
 		};
 		B07E22DF095A335331BE8F07 /* Frameworks */ = {
@@ -457,10 +538,15 @@
 				3C101C721C983BFE0097505D /* KSNavigationController.m in Sources */,
 				3C101C6B1C981FFE0097505D /* UIView+KSExtension.m in Sources */,
 				3C101C5B1C981C550097505D /* AppDelegate.m in Sources */,
+				3CF6DFD41C999E0A00EE3A3B /* KSNewsHeaderModel.m in Sources */,
 				3C101C831C98479A0097505D /* KSWikiDataModel.m in Sources */,
+				3CF6DFC61C998A8400EE3A3B /* KSNewsHomeController.m in Sources */,
 				3C101C631C981E3D0097505D /* KSTabBarController.m in Sources */,
+				3CF6DFD11C998D8900EE3A3B /* KSRequestTool.m in Sources */,
 				3C101C751C983C6F0097505D /* UIBarButtonItem+KSExtension.m in Sources */,
 				3C101C801C9844900097505D /* KSWikiDataController.m in Sources */,
+				3CF6DFCC1C998D3300EE3A3B /* CollectionImageCell.m in Sources */,
+				3CF6DFCD1C998D3300EE3A3B /* CollectionImageView.m in Sources */,
 				3C101C601C981C550097505D /* main.m in Sources */,
 				3C101C5E1C981C550097505D /* KSLolTool.xcdatamodeld in Sources */,
 				3C101C861C9847B80097505D /* KSWikiDataView.m in Sources */,
@@ -590,6 +676,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kamyShi.KSLolTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-format";
 			};
 			name = Debug;
 		};
@@ -605,6 +692,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kamyShi.KSLolTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-format";
 			};
 			name = Release;
 		};
