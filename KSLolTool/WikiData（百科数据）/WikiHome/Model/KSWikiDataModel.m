@@ -18,4 +18,12 @@
     }
     return self;
 }
+
+- (instancetype)initWithTitleName:(NSString *)titleName iconName:(NSString *)iconName clickUrl:(NSString *)url openType:(WikiDataOpenType) openType
+{
+    self = [self initWithTitleName:titleName iconName:iconName];
+    _clickUrl = url;
+    _openType = openType;
+    return self;
+}
 @end

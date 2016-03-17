@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSWikiDataModel.h"
 
 @interface KSWikiDataViewCell : UICollectionViewCell
-
+@property (nonatomic, strong) KSWikiDataModel *model;
 @end

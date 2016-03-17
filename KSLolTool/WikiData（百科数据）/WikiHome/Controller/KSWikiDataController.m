@@ -8,37 +8,91 @@
 
 #import "KSWikiDataController.h"
 #import "KSWikiDataView.h"
+#import "KSWikiDataViewCell.h"
+#import "KSCensusController.h"
 
-@interface KSWikiDataController ()
+@interface KSWikiDataController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@property (nonatomic, strong)UICollectionView *collectionView;
 
+//data
+@property (nonatomic, strong) NSMutableArray *dataArray;
 @end
 
 @implementation KSWikiDataController
-
+NSString *const cellIdentifier = @"KSWikiDataViewCell";
+#pragma mark - Cycle Method
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"百科数据";
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    // Do any additional setup after loading the view.
+    [self loadData];
     
-    KSWikiDataView *view = [[KSWikiDataView alloc]initWithFrame:CGRectMake(0, 64, 50, 70)];
-    view.model = [[KSWikiDataModel alloc] initWithTitleName:@"测试" iconName:@"tabbar_me_highlight"];
-    [self.view addSubview:view];
+    [self.view addSubview:self.collectionView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - private Method
+- (void)loadData
+{
+    KSWikiDataModel *censuModel = [[KSWikiDataModel alloc] initWithTitleName:@"人口普查" iconName:@"" clickUrl:@"http://h5v2.laoyuegou.com/lol/census.html" openType:WikiDataOpenTypeLaoyueUrl];
+    self.dataArray = [NSMutableArray arrayWithObjects:censuModel, nil];
+}
+
+#pragma mark - collectionView delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    KSWikiDataModel *model = self.dataArray[indexPath.row];
+    //多玩数据提取中间的html代码显示
+    //捞月狗数据直接是url显示
+    KSCensusController *ctrl = [[KSCensusController alloc]init];
+    ctrl.model = model;
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+#pragma mark - collectionView dataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.dataArray count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    KSWikiDataViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    //刚加载的时候 添加数据
+    cell.model = self.dataArray[indexPath.row];
+    return cell;
+}
+
+#pragma mark - 懒加载
+- (UICollectionView *)collectionView
+{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+        layout.itemSize = CGSizeMake((self.view.width - 10)/3, self.view.width/3 + 20);
+        layout.minimumLineSpacing = 1;
+        layout.minimumInteritemSpacing = 5;
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height - 64 - 49) collectionViewLayout:layout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        [_collectionView registerClass:[KSWikiDataViewCell class] forCellWithReuseIdentifier:cellIdentifier];
+    }
+    return _collectionView;
+}
 
 @end
