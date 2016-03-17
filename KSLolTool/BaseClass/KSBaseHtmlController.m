@@ -26,6 +26,9 @@
     self.urlStr = url;
     self.htmlStr = html;
     self.titleStr = title;
+    if (!isEmptyString(title)) {
+        self.navigationItem.title = title;
+    }
     switch (_webType) {
         case WebTypeUrl: {
             [self setWebViewWithUrlString:_urlStr];
@@ -68,9 +71,8 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    NSString *document = [webView stringByEvaluatingJavaScriptFromString:@"document"];
-    if (isEmptyString(self.title)) {
-        self.title = title;
+    if (isEmptyString(self.titleStr)) {
+        self.navigationItem.title = title;
     }
 }
 
@@ -105,6 +107,9 @@
         NSString *url = [[request URL] absoluteString];
         [self openNewView:url];
         return NO;
+    } else if (navigationType == UIWebViewNavigationTypeOther) {
+        NSString *url = [[request URL] absoluteString];
+        NSLog(@"other  %@",url);
     }
     return YES;
 }

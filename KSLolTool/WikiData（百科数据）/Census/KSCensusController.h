@@ -7,7 +7,7 @@
 //
 
 #import "KSBaseHtmlController.h"
-
+@class KSWikiDataModel;
 @interface KSCensusController : KSBaseHtmlController
-
+@property (nonatomic, strong) KSWikiDataModel *model;
 @end

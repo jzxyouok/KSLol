@@ -7,6 +7,7 @@
 //
 
 #import "KSCensusController.h"
+#import "KSWikiDataModel.h"
 #import "KSFirstWebController.h"
 
 @interface KSCensusController ()
@@ -18,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setWebViewWithWebType:WebTypeUrl urlString:@"http://h5v2.laoyuegou.com/lol/census.html" htmlString:nil title:nil];
+    [self setWebViewWithWebType:WebTypeUrl urlString:_model.clickUrl htmlString:nil title:_model.titleName];
 }
 
 - (void)didReceiveMemoryWarning {
