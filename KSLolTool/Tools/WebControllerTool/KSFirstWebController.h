@@ -6,8 +6,8 @@
 //  Copyright © 2016年 https://github.com/shijinliang, http://blog.csdn.net/sjl_leaf. All rights reserved.
 //
 
-#import "KSViewController.h"
+#import "KSBaseHtmlController.h"
 
-@interface KSFirstWebController : KSViewController
+@interface KSFirstWebController : KSBaseHtmlController
 
 @end
