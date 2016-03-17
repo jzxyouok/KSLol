@@ -28,12 +28,13 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if ([self.childViewControllers count] > 0) {
-        viewController.navigationItem.backBarButtonItem = [UIBarButtonItem initBackWithImageName:@"navigation_back" target:self action:@selector(back) title:@""];
+        viewController.hidesBottomBarWhenPushed = YES;
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem initBackWithImageName:@"navigation_back" target:self action:@selector(popView) title:@""];
     }
     [super pushViewController:viewController animated:animated];
 }
 
-- (void)back
+- (void)popView
 {
     [self popViewControllerAnimated:YES];
 }

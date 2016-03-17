@@ -28,7 +28,7 @@
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor yellowColor] forState:UIControlStateHighlighted];
-    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [btn sizeToFit];
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }

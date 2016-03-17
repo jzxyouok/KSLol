@@ -9,6 +9,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#define ProductName @"LOL助手"
+
 // 屏幕高度
 #define SCREEN_HEIGHT         [[UIScreen mainScreen] bounds].size.height
 // 屏幕宽度
@@ -16,6 +18,12 @@
 //状态栏高度
 #define StatusHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
 #define NavagationHeight    44
+
+/**
+ *  常用函数
+ */
+#define isNull(x)             (!x || [x isKindOfClass:[NSNull class]])
+#define isEmptyString(x)      (isNull(x) || [x isEqual:@""] || [x isEqual:@"(null)"])
 
 //常用category
 #import "UIView+KSExtension.h"
