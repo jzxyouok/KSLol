@@ -9,12 +9,14 @@
 #import "KSNewsHomeController.h"
 #import "CollectionImageView.h"
 #import "KSNewsHeaderModel.h"
+#import "TabSliderView.h"
 
 @interface KSNewsHomeController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) CollectionImageView *collectionImage;
 @property (nonatomic, strong) NSMutableArray *headerImageArray;
 @property (nonatomic, strong) NSMutableArray *headerArray;
+@property (nonatomic, strong) TabSliderView *tabSliderView;
 @end
 
 @implementation KSNewsHomeController
@@ -25,6 +27,8 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"资讯";
     [self loadDataForHttp];
+    
+    [self.view addSubview:self.tabSliderView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,6 +88,18 @@
 }
 
 #pragma mark - 懒加载
+- (TabSliderView *)tabSliderView
+{
+    if (!_tabSliderView) {
+        _tabSliderView = [[TabSliderView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 50)];
+        _tabSliderView.dataArray = @[@"新闻", @"资讯"];
+        _tabSliderView.returnIndexBlock = ^(NSInteger index){
+            NSLog(@"控制器滑动  %d",index);
+        };
+    }
+    return _tabSliderView;
+}
+
 - (UITableView *)tableView
 {
     if (!_tableView) {
@@ -98,6 +114,7 @@
     }
     return _tableView;
 }
+
 - (CollectionImageView *)collectionImage
 {
     if (!_collectionImage) {
