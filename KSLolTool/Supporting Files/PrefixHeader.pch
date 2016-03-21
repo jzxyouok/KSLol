@@ -9,6 +9,12 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+//GDT广告部分
+#define GDT_APP_KEY @"1105263470"
+#define GDT_BANNER_ID   @"7080809987696526"
+#define GDT_INTERS      @"4030105977497547"
+#define GDT_SPLASH      @"8040509957990558"
+
 #define ProductName @"LOL助手"
 
 // 屏幕高度

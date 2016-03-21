@@ -5,13 +5,18 @@
 //  Created by xiaoshi on 16/3/16.
 //  Copyright © 2016年 https://github.com/shijinliang, http://blog.csdn.net/sjl_leaf. All rights reserved.
 //
-
+#import "GDTMobBannerView.h"
+#import "GDTSplashAd.h"
 #import "KSNewsHomeController.h"
 #import "CollectionImageView.h"
 #import "KSNewsHeaderModel.h"
 #import "TabSliderView.h"
 
-@interface KSNewsHomeController ()<UITableViewDelegate, UITableViewDataSource>
+@interface KSNewsHomeController ()<UITableViewDelegate, UITableViewDataSource,GDTSplashAdDelegate>
+{
+    GDTSplashAd *_splash;
+    GDTMobBannerView *_banner;
+}
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) CollectionImageView *collectionImage;
 @property (nonatomic, strong) NSMutableArray *headerImageArray;
@@ -29,6 +34,66 @@
     [self loadDataForHttp];
     
     [self.view addSubview:self.tabSliderView];
+    [self loadSplash];
+    [self initBanner];
+}
+
+- (void)loadSplash
+{
+    //开屏广告初始化
+    _splash = [[GDTSplashAd alloc] initWithAppkey:GDT_APP_KEY placementId:GDT_SPLASH];
+    _splash.delegate = self;//设置代理
+    //针对不同设备尺寸设置不同的默认图片，拉取广告等待时间会展示该默认图片。
+    if ([[UIScreen mainScreen] bounds].size.height >= 568.0f) {
+        _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LaunchImage-568h"]];
+    } else {
+        _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LaunchImage"]];
+    }
+    
+    UIWindow *fK = [[UIApplication sharedApplication] keyWindow];
+    //设置开屏拉取时长限制，若超时则不再展示广告
+    _splash.fetchDelay = 3;
+    //拉取并展示
+    [_splash loadAdAndShowInWindow:fK];
+}
+
+- (void)initBanner
+{
+    _banner = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 100, SCREEN_WIDTH, 50) appkey:GDT_APP_KEY placementId:GDT_BANNER_ID];
+    _banner.currentViewController = self;
+    _banner.interval = 30;
+    _banner.isAnimationOn = YES;
+    [self.view addSubview:_banner];
+}
+
+- (void)loadBanner
+{
+    [_banner loadAdAndShow];
+}
+
+- (void)splashAdClosed:(GDTSplashAd *)splashAd
+{
+    [self performSelector:@selector(loadBanner) withObject:nil afterDelay:5.0f];
+}
+
+- (void)splashAdClicked:(GDTSplashAd *)splashAd
+{
+    [self performSelector:@selector(loadBanner) withObject:nil afterDelay:10.0f];
+}
+- (void)splashAdFailToPresent:(GDTSplashAd *)splashAd withError:(NSError *)error
+{
+    [self performSelector:@selector(loadBanner) withObject:nil afterDelay:5.0f];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
