@@ -23,10 +23,11 @@
 + (AFHTTPSessionManager *)manager
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/json",
+    //manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    //manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    //manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/x-javascript",
+                                                                              @"application/json",
                                                                               @"text/html",
                                                                               @"text/json",
                                                                               @"text/plain",

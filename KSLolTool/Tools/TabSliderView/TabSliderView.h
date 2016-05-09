@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSNewsIndexModel.h"
 typedef void(^SelectBlock)(NSInteger selectIndex);
 @interface TabSliderView : UIView
 /**
@@ -17,7 +18,7 @@ typedef void(^SelectBlock)(NSInteger selectIndex);
 /**
  *  滑动器里面的数据
  */
-@property (nonatomic, retain)NSArray *dataArray;
+@property (nonatomic, retain)NSArray<KSNewsIndexModel *> *dataArray;
 
 /**
  *  存储button按钮的数组

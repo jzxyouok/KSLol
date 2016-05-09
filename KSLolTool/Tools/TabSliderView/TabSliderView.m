@@ -20,7 +20,7 @@
 }
 
 #pragma mark - set Method
-- (void)setDataArray:(NSArray *)dataArray
+- (void)setDataArray:(NSArray<KSNewsIndexModel *> *)dataArray
 {
     _dataArray = dataArray;
     //设置数据的时候，需要把之前的全部移除，再重新加载
@@ -51,8 +51,9 @@
     //添加底线
     [self.scrollView addSubview:self.lineView];
     CGFloat width = 0;
-    for (NSString *title in self.dataArray) {
-        UIButton *btn = [self buttonWithTitle:title];
+    for (KSNewsIndexModel *model in self.dataArray) {
+        UIButton *btn = [self buttonWithTitle:model.name];
+        btn.tag = [model.ID integerValue];
         CGRect frame = btn.frame;
         btn.frame = CGRectMake(width, 0, frame.size.width + 20, self.height);
         width += btn.width;

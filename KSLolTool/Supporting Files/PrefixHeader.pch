@@ -9,6 +9,9 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#pragma mark QT静态接口
+#define Qt_BaseUrl      @"http://qt.qq.com/static/pages/news/phone/"
+
 #define ProductName @"LOL助手"
 
 // 屏幕高度
@@ -25,8 +28,12 @@
 #define isNull(x)             (!x || [x isKindOfClass:[NSNull class]])
 #define isEmptyString(x)      (isNull(x) || [x isEqual:@""] || [x isEqual:@"(null)"])
 
+#endif /* PrefixHeader_pch */
 //常用category
 #import "UIView+KSExtension.h"
 #import "KSRequestTool.h"
-
-#endif /* PrefixHeader_pch */
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <YYModel/YYModel.h>
+#endif
